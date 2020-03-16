@@ -4,6 +4,7 @@ import functools
 from tree_plt import show_rb_tree, save_rb_tree
 import random
 
+
 class RBNode:
     def __init__(self, val, color="R"):
         self.val = val
@@ -30,6 +31,7 @@ class RBNode:
         print(self.val)
         if self.right:
             self.right.print1()
+
 
 def tree_log(func):
     @functools.wraps(func)
@@ -393,8 +395,8 @@ class RBTree:
             node.parent.right = None
         return
 
-if __name__ == '__main__':
 
+if __name__ == '__main__':
     tree = RBTree()
     data = list(range(1, 20))
     random.shuffle(data)
